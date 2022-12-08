@@ -1,4 +1,4 @@
 StudentID: 2213110345
 Fullname(in English): Suphawich Promjaroen
 AKA : yodkawspw
-ClassDetail: Lab Sheet 4 : String Methods and Defined Method
+ClassDetail: User-Defined Method with String
