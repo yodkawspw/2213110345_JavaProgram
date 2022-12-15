@@ -19,7 +19,7 @@ public class Lab505 {
 		}
 		isITStudent(studentId);
 		isITSubject(subjectId);
-		displayData(isITStudent(studentId),isITSubject(studentId));
+		//displayData(isITStudent(studentId),isITSubject(studentId));
 	}
 	
 	public static boolean isLength(String stuId,String subId) {
