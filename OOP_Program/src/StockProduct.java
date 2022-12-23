@@ -37,5 +37,5 @@ public class StockProduct {
 		}//end for()
 		System.out.println("---------------------------------------------------");
 		System.out.println("Total price of all products is "+frm.format(sum)+" baht.");
-	}
+	}//end of main()
 }

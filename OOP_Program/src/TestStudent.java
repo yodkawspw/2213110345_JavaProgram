@@ -29,7 +29,7 @@ public class TestStudent {
 		if(score >=80 && score <=100) {
 			return "A";
 		}else if (score >=75 && score <=79) {
-			return "";
+			return "B+";
 		}else if (score >=70 && score <=74) {
 			return "B";
 		}else if (score >=65 && score <=69) {
