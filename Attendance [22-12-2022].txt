@@ -1,0 +1,5 @@
+Date : 22-Dec-2022
+StudentID: 2213110345
+Fullname(in English): Suphawich Promjaroen
+AKA : yodkawspw
+ClassDetail: Class and Object, Array of Object
