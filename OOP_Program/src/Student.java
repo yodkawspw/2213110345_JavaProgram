@@ -1,40 +1,64 @@
 
 public class Student {
-	//attributes
+	//The private instance variables
 	private String name;
-	private int score;
+	private String address;
+	//The courses and grades for the courses are kept in 2 parallel arrays
+	private String[] courses;
+	private int[] grades; //valid range is [0,100]
+	private int numCourses; //Number of courses taken so far
+	//Maximum number of courses taken by student
+	private static final int MAX_COURSE = 30;
 	
-	//methods
-	public void setName(String Name) {
-		name = Name;
-	}//end of setName()
+	/**Constructor a Student instance with the given input */
+	public Student(String name,String address) {
+		this.name = name;
+		this.address = address;
+		courses = new String[MAX_COURSE]; //allocate arrays
+		grades = new int[MAX_COURSE];
+		numCourses = 0;
+	}
 	
+	//The public getters and setters.
+	//No setter for name as it is not designed to be changed.
 	public String getName() {
-		return name;
-	}//end of getName
+		return this.name;
+	}
 	
-	public void setScore(int Score) {
-		score = Score;
-	}//end of setScore()
+	public String getAddress() {
+		return this.address;
+	}
 	
-	public int getScore() {
-		return score;
-	}//end of getScore()
+	public void setAddress(String address) {
+		this.address = address;
+	}
 	
-	public boolean checkScore() {
-		if(score >= 0 && score <= 100) {
-			return true;
-		}else
-			return false;
-	}//end of checkScore()
+	public String toString() {
+		return getName()+" ("+ getAddress()+")";
+	}
 	
-	public boolean isPass() {
-		if(score >= 50) {
-			return true;
-		}else {
-			return false;
+	/**Adds a course and grade*/
+	public void addCourseGrade(String course,int grade) {
+		courses[numCourses] = course;
+		grades[numCourses] = grade;
+		++numCourses;
+	}
+	
+	/**Prints all courses and their grades*/
+	public void printGrade() {
+		System.out.print(name);
+		for(int i=0;i<numCourses;i++) {
+			System.out.print(" "+courses[i]+":"+grades[i]);
 		}
-	}//end of isPass()
+		System.out.println();
+	}
 	
-	
+	/**Computes the average grade*/
+	public double getAverageGrade() {
+		int sum = 0;
+		for(int i=0;i<numCourses;i++) {
+			sum+=grades[i];
+		}
+		return (double)sum/numCourses;
+	}
 }
